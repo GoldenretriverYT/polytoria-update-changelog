@@ -70,3 +70,12 @@ jobs:
         file_pattern: "./versions/${{ env.VERSION }}/*"
         commit_user_name: github-actions[bot]
         commit_user_email: github-actions[bot]@users.noreply.github.com
+    - name: Send changes to Discord
+      run: |
+        $version = '${{ env.VERSION }}'
+        $changes = Get-Content -Path "./versions/$version/changes.md" -Raw
+        $webhookUrl = '${{ secrets.DISCORD_WEBHOOK }}'
+        $payload = @{
+          content = "Changes for version $version:`n`n$changes"
+        } | ConvertTo-Json
+        Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body $payload
