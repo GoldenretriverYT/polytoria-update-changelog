@@ -30,7 +30,7 @@ jobs:
       run: |
         if (Test-Path "./versions/${{ env.VERSION }}") {
           echo "Client version already exists. Cancelling."
-          exit 0
+          exit 1
         }
 
     - name: Download and unzip client
