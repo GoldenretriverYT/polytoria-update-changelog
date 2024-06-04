@@ -20,34 +20,31 @@ jobs:
       run: |
         $response = Invoke-WebRequest -Uri 'https://api.polytoria.com/v1/launcher/updates?os=windows&release=stable' -UseBasicParsing
         $json = $response.Content | ConvertFrom-Json
-        echo "::set-output name=version::${json.Client.Version}"
-        echo "::set-output name=download_url::${json.Client.Download}"
+        echo "VERSION=${json.Client.Version}" >> $GITHUB_ENV
+        echo "DOWNLOAD_URL=${json.Client.Download}" >> $GITHUB_ENV
 
     - name: Check if client version exists
-      id: check-version
       run: |
-        if (Test-Path "./versions/${{ steps.fetch-updates.outputs.version }}") {
+        if (Test-Path "./versions/${{ env.VERSION }}") {
           echo "Client version already exists. Cancelling."
           exit 0
         }
 
     - name: Download and unzip client
-      if: steps.check-version.outputs.version == ''
+      env:
+        DOWNLOAD_URL: ${{ env.DOWNLOAD_URL }}
       run: |
-        $downloadUrl = '${{ steps.fetch-updates.outputs.download_url }}'
         $outputPath = 'client.7z'
-        Invoke-WebRequest -Uri $downloadUrl -OutFile $outputPath
+        Invoke-WebRequest -Uri $env:DOWNLOAD_URL -OutFile $outputPath
         7z x $outputPath -o"client"
 
     - name: Run Polytoria Client
-      if: steps.check-version.outputs.version == ''
       run: |
         Start-Process -FilePath "client/Polytoria Client.exe" -ArgumentList "--dump-api" -Wait
 
     - name: Upload ReflectionData.xml
-      if: steps.check-version.outputs.version == ''
       run: |
-        $version = '${{ steps.fetch-updates.outputs.version }}'
+        $version = '${{ env.VERSION }}'
         $reflectionDataPath = [Environment]::GetFolderPath('MyDocuments') + "\Polytoria Scripting API Dump\ReflectionData.xml"
         $destPath = "./versions/$version/ReflectionData.xml"
         mkdir -p (Split-Path -Parent $destPath)
@@ -57,9 +54,8 @@ jobs:
         git push
 
     - name: Generate changes.md
-      if: steps.check-version.outputs.version == ''
       run: |
-        $version = '${{ steps.fetch-updates.outputs.version }}'
+        $version = '${{ env.VERSION }}'
         $previousVersion = Get-ChildItem -Directory ./versions | Sort-Object Name | Select-Object -Last 2 | Select-Object -First 1
         $oldFile = "./versions/$($previousVersion.Name)/ReflectionData.xml"
         $newFile = "./versions/$version/ReflectionData.xml"
