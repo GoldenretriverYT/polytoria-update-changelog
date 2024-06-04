@@ -76,6 +76,6 @@ jobs:
         $changes = Get-Content -Path "./versions/$version/changes.md" -Raw
         $webhookUrl = '${{ secrets.DISCORD_WEBHOOK }}'
         $payload = @{
-          content = "Changes for version $version:`n`n$changes"
+          content = "Changes for version $($version):`n`n$($changes)"
         } | ConvertTo-Json
         Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body $payload
