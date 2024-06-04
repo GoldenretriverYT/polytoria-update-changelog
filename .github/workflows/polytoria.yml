@@ -11,6 +11,9 @@ jobs:
   update:
     runs-on: windows-latest
 
+    permissions:
+      contents: write
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -49,9 +52,6 @@ jobs:
         $destPath = "./versions/$version/ReflectionData.xml"
         mkdir -p (Split-Path -Parent $destPath)
         Copy-Item $reflectionDataPath -Destination $destPath
-        git add $destPath
-        git commit -m "Add ReflectionData.xml for version $version"
-        git push
 
     - name: Generate changes.md
       run: |
@@ -61,6 +61,12 @@ jobs:
         $newFile = "./versions/$version/ReflectionData.xml"
         $changesFile = "./versions/$version/changes.md"
         python ./scripts/generate_changes.py $oldFile $newFile $changesFile
-        git add $changesFile
-        git commit -m "Add changes.md for version $version"
-        git push
+
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Add ReflectionData.xml and changes.md for version ${{ env.VERSION }}"
+        branch: main
+        file_pattern: "./versions/${{ env.VERSION }}/*"
+        commit_user_name: github-actions[bot]
+        commit_user_email: github-actions[bot]@users.noreply.github.com
