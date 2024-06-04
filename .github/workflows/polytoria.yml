@@ -75,7 +75,12 @@ jobs:
         $version = '${{ env.VERSION }}'
         $changes = Get-Content -Path "./versions/$version/changes.md" -Raw
         $webhookUrl = '${{ secrets.DISCORD_WEBHOOK }}'
+        $changesToSend = if ($changes.Length -gt 1500) { 
+            $changes.Substring(0, 1500) + "`n...`n[Read the full changelog](https://github.com/GoldenretriverYT/polytoria-update-changelog/blob/main/versions/$version/changes.md)"
+        } else {
+            $changes
+        }
         $payload = @{
-          content = "Changes for version $($version):`n`n$($changes)"
+          content = "Changes for version $($version):`n`n$($changesToSend)"
         } | ConvertTo-Json
         Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body $payload
