@@ -38,28 +38,28 @@ def compare_versions(old_data, new_data):
         # Compare methods
         for method_name, parameters in new_methods.items():
             if method_name not in old_methods:
-                changes.append(f'New method added in {type_name}: {method_name}')
+                changes.append(f'New method added in `{type_name}`: `{method_name}`')
             elif old_methods[method_name] != parameters:
-                changes.append(f'Method {method_name} in {type_name} changed parameters')
+                changes.append(f'Method `{method_name}` in `{type_name}` changed parameters')
 
         for method_name in old_methods:
             if method_name not in new_methods:
-                changes.append(f'Method {method_name} removed from {type_name}')
+                changes.append(f'Method `{method_name}` removed from `{type_name}`')
 
         # Compare properties
         for property_name, property_type in new_properties.items():
             if property_name not in old_properties:
-                changes.append(f'New property added in {type_name}: {property_name} of type {property_type}')
+                changes.append(f'New property added in `{type_name}`: `{property_name}` of type `{property_type}`')
             elif old_properties[property_name] != property_type:
-                changes.append(f'Property {property_name} in {type_name} changed type from {old_properties[property_name]} to {property_type}')
+                changes.append(f'Property `{property_name}` in `{type_name}` changed type from `{old_properties[property_name]}` to `{property_type}`')
 
         for property_name in old_properties:
             if property_name not in new_properties:
-                changes.append(f'Property {property_name} removed from {type_name}')
+                changes.append(f'Property `{property_name}` removed from `{type_name}`')
 
     for type_name in old_types:
         if type_name not in new_data:
-            changes.append(f'Type removed: {type_name}')
+            changes.append(f'Type removed: `{type_name}`')
 
     return changes
 
