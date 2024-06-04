@@ -20,8 +20,8 @@ jobs:
       run: |
         $response = Invoke-WebRequest -Uri 'https://api.polytoria.com/v1/launcher/updates?os=windows&release=stable' -UseBasicParsing
         $json = $response.Content | ConvertFrom-Json
-        echo "VERSION=${json.Client.Version}" >> $GITHUB_ENV
-        echo "DOWNLOAD_URL=${json.Client.Download}" >> $GITHUB_ENV
+        echo "VERSION=$($json.Client.Version)" >> $env:GITHUB_ENV
+        echo "DOWNLOAD_URL=$($json.Client.Download)" >> $env:GITHUB_ENV
 
     - name: Check if client version exists
       run: |
@@ -31,8 +31,6 @@ jobs:
         }
 
     - name: Download and unzip client
-      env:
-        DOWNLOAD_URL: ${{ env.DOWNLOAD_URL }}
       run: |
         $outputPath = 'client.7z'
         Invoke-WebRequest -Uri $env:DOWNLOAD_URL -OutFile $outputPath
