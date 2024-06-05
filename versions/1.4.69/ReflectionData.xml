@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dump Version="1.4.69">
+  <Type Name="AchievementServiceProxy" FullName="Polytoria.Datamodel.Proxies.AchievementServiceProxy" InheritsFrom="System.Object">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="BackpackProxy" FullName="Polytoria.Datamodel.Proxies.BackpackProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="BaseScriptProxy" FullName="Polytoria.Datamodel.Proxies.BaseScriptProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="BodyPositionProxy" FullName="Polytoria.Datamodel.Proxies.BodyPositionProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="BoolValueProxy" FullName="Polytoria.Datamodel.Proxies.BoolValueProxy" InheritsFrom="Polytoria.Datamodel.Proxies.ValueBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="CameraProxy" FullName="Polytoria.Datamodel.Proxies.CameraProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ClimbableProxy" FullName="Polytoria.Datamodel.Proxies.ClimbableProxy" InheritsFrom="Polytoria.Datamodel.Proxies.PartProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ColorValueProxy" FullName="Polytoria.Datamodel.Proxies.ColorValueProxy" InheritsFrom="Polytoria.Datamodel.Proxies.ValueBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="CoreUIServiceProxy" FullName="Polytoria.Datamodel.Proxies.CoreUIServiceProxy" InheritsFrom="System.Object">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="DatastoreProxy" FullName="Polytoria.Datamodel.Proxies.DatastoreProxy" InheritsFrom="System.Object">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="DataStoreServiceProxy" FullName="Polytoria.Datamodel.Proxies.DataStoreServiceProxy" InheritsFrom="System.Object">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="DecalProxy" FullName="Polytoria.Datamodel.Proxies.DecalProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="DynamicInstanceProxy" FullName="Polytoria.Datamodel.Proxies.DynamicInstanceProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="EnvironmentProxy" FullName="Polytoria.Datamodel.Proxies.EnvironmentProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="GameProxy" FullName="Polytoria.Datamodel.Proxies.GameProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="GradientSkyProxy" FullName="Polytoria.Datamodel.Proxies.GradientSkyProxy" InheritsFrom="Polytoria.Datamodel.Proxies.SkyBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="GUIProxy" FullName="Polytoria.Datamodel.Proxies.GUIProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="HiddenProxy" FullName="Polytoria.Datamodel.Proxies.HiddenProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ImageSkyProxy" FullName="Polytoria.Datamodel.Proxies.ImageSkyProxy" InheritsFrom="Polytoria.Datamodel.Proxies.SkyBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="InsertServiceProxy" FullName="Polytoria.Datamodel.Proxies.InsertServiceProxy" InheritsFrom="System.Object">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="InstanceProxy" FullName="Polytoria.Datamodel.Proxies.InstanceProxy" InheritsFrom="System.Object">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="InstanceValueProxy" FullName="Polytoria.Datamodel.Proxies.InstanceValueProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="IntValueProxy" FullName="Polytoria.Datamodel.Proxies.IntValueProxy" InheritsFrom="Polytoria.Datamodel.Proxies.ValueBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="LightingProxy" FullName="Polytoria.Datamodel.Proxies.LightingProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="LocalScriptProxy" FullName="Polytoria.Datamodel.Proxies.LocalScriptProxy" InheritsFrom="Polytoria.Datamodel.Proxies.BaseScriptProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="MeshPartProxy" FullName="Polytoria.Datamodel.Proxies.MeshPartProxy" InheritsFrom="Polytoria.Datamodel.Proxies.PartProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ModelProxy" FullName="Polytoria.Datamodel.Proxies.ModelProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ModuleScriptProxy" FullName="Polytoria.Datamodel.Proxies.ModuleScriptProxy" InheritsFrom="Polytoria.Datamodel.Proxies.BaseScriptProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="NetworkEventProxy" FullName="Polytoria.Datamodel.Proxies.NetworkEventProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="NPCProxy" FullName="Polytoria.Datamodel.Proxies.NPCProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="NumberValueProxy" FullName="Polytoria.Datamodel.Proxies.NumberValueProxy" InheritsFrom="Polytoria.Datamodel.Proxies.ValueBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ParticlesProxy" FullName="Polytoria.Datamodel.Proxies.ParticlesProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="PartProxy" FullName="Polytoria.Datamodel.Proxies.PartProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="PlayerDefaultsProxy" FullName="Polytoria.Datamodel.Proxies.PlayerDefaultsProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="PlayerGUIProxy" FullName="Polytoria.Datamodel.Proxies.PlayerGUIProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="PlayerProxy" FullName="Polytoria.Datamodel.Proxies.PlayerProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="PlayersProxy" FullName="Polytoria.Datamodel.Proxies.PlayersProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="PointLightProxy" FullName="Polytoria.Datamodel.Proxies.PointLightProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ProceduralSkyProxy" FullName="Polytoria.Datamodel.Proxies.ProceduralSkyProxy" InheritsFrom="Polytoria.Datamodel.Proxies.SkyBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="RemoveEventProxy" FullName="Polytoria.Datamodel.Proxies.RemoveEventProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ScriptInstanceProxy" FullName="Polytoria.Datamodel.Proxies.ScriptInstanceProxy" InheritsFrom="Polytoria.Datamodel.Proxies.BaseScriptProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ScriptServiceProxy" FullName="Polytoria.Datamodel.Proxies.ScriptServiceProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="SeatProxy" FullName="Polytoria.Datamodel.Proxies.SeatProxy" InheritsFrom="Polytoria.Datamodel.Proxies.PartProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ServerHiddenProxy" FullName="Polytoria.Datamodel.Proxies.ServerHiddenProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="SkyBaseProxy" FullName="Polytoria.Datamodel.Proxies.SkyBaseProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="SoundProxy" FullName="Polytoria.Datamodel.Proxies.SoundProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="SpotlightProxy" FullName="Polytoria.Datamodel.Proxies.SpotlightProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="StringValueProxy" FullName="Polytoria.Datamodel.Proxies.StringValueProxy" InheritsFrom="Polytoria.Datamodel.Proxies.ValueBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="SunLightProxy" FullName="Polytoria.Datamodel.Proxies.SunLightProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="Text3DProxy" FullName="Polytoria.Datamodel.Proxies.Text3DProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ToolProxy" FullName="Polytoria.Datamodel.Proxies.ToolProxy" InheritsFrom="Polytoria.Datamodel.Proxies.DynamicInstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="TrussProxy" FullName="Polytoria.Datamodel.Proxies.TrussProxy" InheritsFrom="Polytoria.Datamodel.Proxies.ClimbableProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UIButtonProxy" FullName="Polytoria.Datamodel.Proxies.UIButtonProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UILabelProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UIFieldProxy" FullName="Polytoria.Datamodel.Proxies.UIFieldProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UIHorizontalLayoutProxy" FullName="Polytoria.Datamodel.Proxies.UIHorizontalLayoutProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UIHVLayoutProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UIHVLayoutProxy" FullName="Polytoria.Datamodel.Proxies.UIHVLayoutProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UIFieldProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UIImageProxy" FullName="Polytoria.Datamodel.Proxies.UIImageProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UIFieldProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UILabelProxy" FullName="Polytoria.Datamodel.Proxies.UILabelProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UIViewProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UITextInputProxy" FullName="Polytoria.Datamodel.Proxies.UITextInputProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UIViewProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UIVerticalLayoutProxy" FullName="Polytoria.Datamodel.Proxies.UIVerticalLayoutProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UIHVLayoutProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="UIViewProxy" FullName="Polytoria.Datamodel.Proxies.UIViewProxy" InheritsFrom="Polytoria.Datamodel.Proxies.UIFieldProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="ValueBaseProxy" FullName="Polytoria.Datamodel.Proxies.ValueBaseProxy" InheritsFrom="Polytoria.Datamodel.Proxies.InstanceProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+  <Type Name="Vector3ValueProxy" FullName="Polytoria.Datamodel.Proxies.Vector3ValueProxy" InheritsFrom="Polytoria.Datamodel.Proxies.ValueBaseProxy">
+    <Method Name="Equals" ReturnType="System.Boolean">
+      <Parameter Name="obj" Type="System.Object" />
+    </Method>
+    <Method Name="GetHashCode" ReturnType="System.Int32" />
+    <Method Name="GetType" ReturnType="System.Type" />
+    <Method Name="ToString" ReturnType="System.String" />
+  </Type>
+</Dump>
