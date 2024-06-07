@@ -5,19 +5,20 @@ Inherits from: [DynamicInstanceProxy](#DynamicInstanceProxy)
 ## DynamicInstanceProxy
 Inherits from: [InstanceProxy](#InstanceProxy)
 - Method `LookAt` changed parameters: 
-  - Parameter `dynamicInstance` changed type from ``DynamicInstance`` to ``Polytoria.Datamodel.DynamicInstance``
+  - Parameter `dynamicInstance` changed type from `DynamicInstance` to `Polytoria.Datamodel.DynamicInstance`
 ## EnvironmentProxy
 Inherits from: [InstanceProxy](#InstanceProxy)
 - Method `CreateExplosion` changed parameters: 
-  - Parameter `func` changed type from ``MoonSharp.Interpreter.DynValue`` to ``MoonSharp.Interpreter.DynValue``
+  - Parameter `func` removed
+  - Parameter `callback` added
 - Method `Raycast` changed parameters: 
-  - Parameter `ignoreList` changed type from ``System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`` to ``System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]``
+  - Parameter `ignoreList` changed type from `System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]` to `System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`
 - Method `RaycastAll` changed parameters: 
-  - Parameter `ignoreList` changed type from ``System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`` to ``System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]``
+  - Parameter `ignoreList` changed type from `System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]` to `System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`
 - Method `OverlapSphere` changed parameters: 
-  - Parameter `ignoreList` changed type from ``System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`` to ``System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]``
+  - Parameter `ignoreList` changed type from `System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]` to `System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`
 - Method `OverlapBox` changed parameters: 
-  - Parameter `ignoreList` changed type from ``System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`` to ``System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]``
+  - Parameter `ignoreList` changed type from `System.Collections.Generic.List`1[[Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]` to `System.Collections.Generic.List`1[[Polytoria.Datamodel.Instance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]`
 - Property `Skybox` changed type from ``SkyboxPreset`` to ``Polytoria.Datamodel.SkyboxPreset``
 ## GameProxy
 Inherits from: [InstanceProxy](#InstanceProxy)
@@ -25,11 +26,11 @@ Inherits from: [InstanceProxy](#InstanceProxy)
 ## InstanceProxy
 Inherits from: [Object](#Object)
 - Method `SetParent` changed parameters: 
-  - Parameter `parent` changed type from ``Instance`` to ``Polytoria.Datamodel.Instance``
+  - Parameter `parent` changed type from `Instance` to `Polytoria.Datamodel.Instance`
 - Method `IsDescendantOf` changed parameters: 
-  - Parameter `parent` changed type from ``Instance`` to ``Polytoria.Datamodel.Instance``
+  - Parameter `parent` changed type from `Instance` to `Polytoria.Datamodel.Instance`
 - Method `New` changed parameters: 
-  - Parameter `parent` changed type from ``Instance`` to ``Polytoria.Datamodel.Instance``
+  - Parameter `parent` changed type from `Instance` to `Polytoria.Datamodel.Instance`
 - Property `Item` changed type from ``Instance`` to ``Polytoria.Datamodel.Instance``
 - Property `Parent` changed type from ``Instance`` to ``Polytoria.Datamodel.Instance``
 - Property `ChildRemoved` changed type from ``LuaEvent`` to ``Polytoria.Lua.LuaEvent``
@@ -48,12 +49,12 @@ Inherits from: [InstanceProxy](#InstanceProxy)
 ## NetworkEventProxy
 Inherits from: [InstanceProxy](#InstanceProxy)
 - Method `InvokeServer` changed parameters: 
-  - Parameter `msg` changed type from ``NetMessage`` to ``Polytoria.Datamodel.NetMessage``
+  - Parameter `msg` changed type from `NetMessage` to `Polytoria.Datamodel.NetMessage`
 - Method `InvokeClient` changed parameters: 
-  - Parameter `msg` changed type from ``NetMessage`` to ``Polytoria.Datamodel.NetMessage``
-  - Parameter `player` changed type from ``Player`` to ``Polytoria.Datamodel.Player``
+  - Parameter `msg` changed type from `NetMessage` to `Polytoria.Datamodel.NetMessage`
+  - Parameter `player` changed type from `Player` to `Polytoria.Datamodel.Player`
 - Method `InvokeClients` changed parameters: 
-  - Parameter `msg` changed type from ``NetMessage`` to ``Polytoria.Datamodel.NetMessage``
+  - Parameter `msg` changed type from `NetMessage` to `Polytoria.Datamodel.NetMessage`
 - Property `InvokedServer` changed type from ``LuaEvent`` to ``Polytoria.Lua.LuaEvent``
 - Property `InvokedClient` changed type from ``LuaEvent`` to ``Polytoria.Lua.LuaEvent``
 ## NPCProxy
@@ -79,11 +80,12 @@ Inherits from: [DynamicInstanceProxy](#DynamicInstanceProxy)
 ## PlayerProxy
 Inherits from: [InstanceProxy](#InstanceProxy)
 - Method `OwnsItem` changed parameters: 
-  - Parameter `callOnComplete` changed type from ``MoonSharp.Interpreter.DynValue`` to ``MoonSharp.Interpreter.DynValue``
+  - Parameter `callOnComplete` removed
+  - Parameter `callback` added
 - Method `Sit` changed parameters: 
-  - Parameter `seat` changed type from ``Seat`` to ``Polytoria.Datamodel.Seat``
+  - Parameter `seat` changed type from `Seat` to `Polytoria.Datamodel.Seat`
 - Method `LookAt` changed parameters: 
-  - Parameter `instance` changed type from ``DynamicInstance`` to ``Polytoria.Datamodel.DynamicInstance``
+  - Parameter `instance` changed type from `DynamicInstance` to `Polytoria.Datamodel.DynamicInstance`
 - Property `SittingIn` changed type from ``Seat`` to ``Polytoria.Datamodel.Seat``
 - Property `Chatted` changed type from ``LuaEvent`` to ``Polytoria.Lua.LuaEvent``
 - Property `Died` changed type from ``LuaEvent`` to ``Polytoria.Lua.LuaEvent``
@@ -96,7 +98,7 @@ Inherits from: [InstanceProxy](#InstanceProxy)
 ## RemoveEventProxy
 Inherits from: [InstanceProxy](#InstanceProxy)
 - Method `Invoke` changed parameters: 
-  - Parameter `val` changed type from ``Instance`` to ``Polytoria.Datamodel.Instance``
+  - Parameter `val` changed type from `Instance` to `Polytoria.Datamodel.Instance`
 - Property `Invoked` changed type from ``LuaEvent`` to ``Polytoria.Lua.LuaEvent``
 ## SeatProxy
 Inherits from: [PartProxy](#PartProxy)

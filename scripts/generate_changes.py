@@ -92,15 +92,24 @@ def compare_versions(old_data, new_data):
                 typeChanges.append(f'- New method added: `{method_name}`')
             elif old_methods[method_name] != parameters:
                 typeChanges.append(f'- Method `{method_name}` changed parameters: ')
-                for old_param, new_param in zip(old_methods[method_name], parameters):
-                    if old_param != new_param:
-                        typeChanges.append(f'  - Parameter `{old_param[0]}` changed type from ``{old_param[1]}`` to ``{new_param[1]}``')
 
-                for old_param in old_methods[method_name][len(parameters):]:
-                    typeChanges.append(f'  - Parameter `{old_param[0]}` removed')
+                # First, check if any parameters were removed
+                for old_param in old_methods[method_name]:
+                    new_param = [param for param in parameters if param[0] == old_param[0]]
+                    if not new_param:
+                        typeChanges.append(f'  - Parameter `{old_param[0]}` removed')
 
-                for new_param in parameters[len(old_methods[method_name]):]:
-                    typeChanges.append(f'  - New parameter added: ``{new_param[0]}`` of type ``{new_param[1]}``')
+                # Then, check if any parameters were added
+                for new_param in parameters:
+                    old_param = [param for param in old_methods[method_name] if param[0] == new_param[0]]
+                    if not old_param:
+                        typeChanges.append(f'  - Parameter `{new_param[0]}` added')
+
+                # And check for any type changes
+                for old_param in old_methods[method_name]:
+                    new_param = [param for param in parameters if param[0] == old_param[0]]
+                    if new_param and new_param[0][1] != old_param[1]:
+                        typeChanges.append(f'  - Parameter `{old_param[0]}` changed type from `{old_param[1]}` to `{new_param[0][1]}`')
 
         for method_name in old_methods:
             if method_name not in new_methods:
