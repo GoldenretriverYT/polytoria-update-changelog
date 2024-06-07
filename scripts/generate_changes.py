@@ -9,12 +9,13 @@ def parse_xml(file_path):
     for type_elem in root.findall('Type'):
         type_name = type_elem.get('Name')
         inherits_from = type_elem.get('InheritsFrom').split(".")[-1] if type_elem.get('InheritsFrom') else None
-        
+
         methods = {}
         properties = {}
         for method_elem in type_elem.findall('Method'):
             method_name = method_elem.get('Name')
             parameters = [(param.get('Name'), param.get('Type')) for param in method_elem.findall('Parameter')]
+
 
             methods[method_name] = parameters
         for property_elem in type_elem.findall('Property'):
@@ -93,13 +94,13 @@ def compare_versions(old_data, new_data):
                 typeChanges.append(f'- Method `{method_name}` changed parameters: ')
                 for old_param, new_param in zip(old_methods[method_name], parameters):
                     if old_param != new_param:
-                        typeChanges.append(f'  - Parameter `{old_param[0]}` changed type from `{old_param[1]}` to `{new_param[1]}`')
+                        typeChanges.append(f'  - Parameter `{old_param[0]}` changed type from ``{old_param[1]}`` to ``{new_param[1]}``')
 
                 for old_param in old_methods[method_name][len(parameters):]:
                     typeChanges.append(f'  - Parameter `{old_param[0]}` removed')
 
                 for new_param in parameters[len(old_methods[method_name]):]:
-                    typeChanges.append(f'  - New parameter added: `{new_param[0]}` of type `{new_param[1]}`')
+                    typeChanges.append(f'  - New parameter added: ``{new_param[0]}`` of type ``{new_param[1]}``')
 
         for method_name in old_methods:
             if method_name not in new_methods:
@@ -108,9 +109,9 @@ def compare_versions(old_data, new_data):
         # Compare properties
         for property_name, property_type in new_properties.items():
             if property_name not in old_properties:
-                typeChanges.append(f'- New property added: `{property_name}` of type `{property_type}`')
+                typeChanges.append(f'- New property added: `{property_name}` of type ``{property_type}``')
             elif old_properties[property_name] != property_type:
-                typeChanges.append(f'- Property `{property_name}` changed type from `{old_properties[property_name]}` to `{property_type}`')
+                typeChanges.append(f'- Property `{property_name}` changed type from ``{old_properties[property_name]}`` to ``{property_type}``')
 
         for property_name in old_properties:
             if property_name not in new_properties:
