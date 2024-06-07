@@ -108,9 +108,9 @@ def compare_versions(old_data, new_data):
         # Compare properties
         for property_name, property_type in new_properties.items():
             if property_name not in old_properties:
-                typeChanges.append(f'- New property added in `{type_name}`: `{property_name}` of type `{property_type}`')
+                typeChanges.append(f'- New property added: `{property_name}` of type `{property_type}`')
             elif old_properties[property_name] != property_type:
-                typeChanges.append(f'- Property `{property_name}` in `{type_name}` changed type from `{old_properties[property_name]}` to `{property_type}`')
+                typeChanges.append(f'- Property `{property_name}` changed type from `{old_properties[property_name]}` to `{property_type}`')
 
         for property_name in old_properties:
             if property_name not in new_properties:
