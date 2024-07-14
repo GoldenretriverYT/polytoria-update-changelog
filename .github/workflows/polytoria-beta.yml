@@ -1,4 +1,4 @@
-name: Polytoria Update
+name: Polytoria Update (BETA BRANCH)
 
 on:
   schedule:
@@ -21,7 +21,7 @@ jobs:
     - name: Fetch Polytoria updates
       id: fetch-updates
       run: |
-        $response = Invoke-WebRequest -Uri 'https://api.polytoria.com/v1/launcher/updates?os=windows&release=stable' -UseBasicParsing
+        $response = Invoke-WebRequest -Uri 'https://api.polytoria.com/v1/launcher/updates?os=windows&release=beta' -UseBasicParsing
         $json = $response.Content | ConvertFrom-Json
         echo "VERSION=$($json.Client.Version)" >> $env:GITHUB_ENV
         echo "DOWNLOAD_URL=$($json.Client.Download)" >> $env:GITHUB_ENV
@@ -78,7 +78,7 @@ jobs:
           secret-key: ${{ secrets.IA_SECRET_KEY }}
           identifier: "polytoria-client-${{ env.VERSION }}"
           files: "client/**/*"	
-
+          
     - name: Send changes to Discord
       run: |
         $version = '${{ env.VERSION }}'
