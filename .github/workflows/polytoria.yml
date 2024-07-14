@@ -77,7 +77,7 @@ jobs:
         access-key: ${{ secrets.IA_ACCESS_KEY }}
         secret-key: ${{ secrets.IA_SECRET_KEY }}
         identifier: "polytoria-client-${{ env.VERSION }}"
-        files: "client/**/*"	
+        files: "client.7z"	
 
     - name: Send changes to Discord
       run: |
