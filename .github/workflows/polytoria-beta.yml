@@ -71,12 +71,14 @@ jobs:
         commit_user_name: github-actions[bot]
         commit_user_email: github-actions[bot]@users.noreply.github.com
 
-    - name: Upload client as artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Polytoria_Client_${{ env.VERSION }}
-        path: client/**/*
-
+    - name: Upload file to archive.org
+        uses: palewire/internet-archive-upload@v1
+        with:
+          access-key: ${{ secrets.IA_ACCESS_KEY }}
+          secret-key: ${{ secrets.IA_SECRET_KEY }}
+          identifier: "polytoria-client-${{ env.VERSION }}"
+          files: "client/**/*"	
+          
     - name: Send changes to Discord
       run: |
         $version = '${{ env.VERSION }}'
