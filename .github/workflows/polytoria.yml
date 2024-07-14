@@ -39,10 +39,10 @@ jobs:
         Invoke-WebRequest -Uri $env:DOWNLOAD_URL -OutFile $outputPath
         7z x $outputPath -o"client"
 
-    - name: Run Polytoria Client and wait for 15 seconds
+    - name: Run Polytoria Client and wait for 20 seconds
       run: |
         Start-Process -FilePath "client/Polytoria Client.exe" -ArgumentList "--dump-api"
-        Start-Sleep -s 15
+        Start-Sleep -s 20
         Stop-Process -Name "Polytoria Client" -Force
 
     - name: Upload ReflectionData.xml
