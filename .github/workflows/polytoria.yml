@@ -70,6 +70,13 @@ jobs:
         file_pattern: "./versions/${{ env.VERSION }}/*"
         commit_user_name: github-actions[bot]
         commit_user_email: github-actions[bot]@users.noreply.github.com
+
+    - name: Upload client as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Polytoria_Client_${{ env.VERSION }}
+        path: client/**/*
+
     - name: Send changes to Discord
       run: |
         $version = '${{ env.VERSION }}'
