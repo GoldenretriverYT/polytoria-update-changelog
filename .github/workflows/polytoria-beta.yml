@@ -62,22 +62,27 @@ jobs:
         $changesFile = "./versions/$version/changes.md"
         python ./scripts/generate_changes.py $oldFile $newFile $changesFile
 
-    - name: Commit and push changes
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "Add ReflectionData.xml and changes.md for version ${{ env.VERSION }}"
-        branch: main
-        file_pattern: "./versions/${{ env.VERSION }}/*"
-        commit_user_name: github-actions[bot]
-        commit_user_email: github-actions[bot]@users.noreply.github.com
-
     - name: Upload file to archive.org
       uses: qoijjj/internet-archive-upload@v7
       with:
         access-key: ${{ secrets.IA_ACCESS_KEY }}
         secret-key: ${{ secrets.IA_SECRET_KEY }}
-        identifier: "polytoria-client-${{ env.VERSION }}"
+        identifier: "polytoria-client-${{ env.VERSION }}-beta"
         files: "client.7z"	
+
+    - name: Create archive-link.md in versions folder
+      run: |
+        $version = '${{ env.VERSION }}'
+        echo "Download the client from [archive.org](https://archive.org/details/polytoria-client-${{ env.VERSION }}-beta)" > "./versions/$version/archive-link.md"
+
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Add ReflectionData.xml and changes.md and archive-link.md for version ${{ env.VERSION }} on beta branch"
+        branch: main
+        file_pattern: "./versions/${{ env.VERSION }}/*"
+        commit_user_name: github-actions[bot]
+        commit_user_email: github-actions[bot]@users.noreply.github.com
 
     - name: Send changes to Discord
       run: |
