@@ -62,19 +62,6 @@ jobs:
         $changesFile = "./versions/$version/changes.md"
         python ./scripts/generate_changes.py $oldFile $newFile $changesFile
 
-    - name: Upload file to archive.org
-      uses: qoijjj/internet-archive-upload@v7
-      with:
-        access-key: ${{ secrets.IA_ACCESS_KEY }}
-        secret-key: ${{ secrets.IA_SECRET_KEY }}
-        identifier: "polytoria-client-${{ env.VERSION }}"
-        files: "client.7z"	
-
-    - name: Create archive-link.md in versions folder
-      run: |
-        $version = '${{ env.VERSION }}'
-        echo "Download the client from [archive.org](https://archive.org/details/polytoria-client-${{ env.VERSION }})" > "./versions/$version/archive-link.md"
-
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
