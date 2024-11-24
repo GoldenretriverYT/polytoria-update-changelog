@@ -141,6 +141,7 @@ if __name__ == '__main__':
     old_file = sys.argv[1]
     new_file = sys.argv[2]
     changes_file = sys.argv[3]
+    print(f'Computing changes between `${old_file}` and `${new_file}` into `${changes_file}`');
 
     old_data, old_base_types = parse_xml(old_file)
     new_data, new_base_types = parse_xml(new_file)
