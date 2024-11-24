@@ -56,18 +56,40 @@ jobs:
     - name: Generate changes.md
       run: |
         $version = '${{ env.VERSION }}'
-        $previousVersion = Get-ChildItem -Directory ./versions | 
-          ForEach-Object { 
-              # Create custom object with original name and parsed version components
-              [PSCustomObject]@{
-                  Name = $_.Name
-                  Version = [version]($_.Name -replace '^v?(\d+\.\d+\.\d+).*', '$1')
-              }
-          } | 
-          Sort-Object Version | # Sort by parsed version number
-          Select-Object -Last 2 | # Get last two versions
-          Select-Object -First 1 | # Get the second-to-last version
-          Select-Object -ExpandProperty Name # Get just the name
+        $versions = Get-ChildItem -Directory ./versions | 
+            ForEach-Object { 
+                try {
+                    # Let's first see what names we're working with
+                    Write-Host "Processing directory: $($_.Name)"
+                    
+                    # Attempt version parsing and show the result
+                    $versionString = $_.Name -replace '^v?(\d+\.\d+\.\d+).*', '$1'
+                    Write-Host "Extracted version string: $versionString"
+                    
+                    $parsedVersion = [version]$versionString
+                    Write-Host "Parsed version: $parsedVersion"
+                    
+                    [PSCustomObject]@{
+                        Name = $_.Name
+                        Version = $parsedVersion
+                    }
+                }
+                catch {
+                    Write-Host "Error processing $($_.Name): $_"
+                }
+            } | 
+            Sort-Object Version |
+            Select-Object Name, Version
+        
+        Write-Host "All versions found:"
+        $versions | Format-Table
+        
+        $previousVersion = $versions | 
+            Select-Object -Last 2 | 
+            Select-Object -First 1 | 
+            Select-Object -ExpandProperty Name
+        
+        Write-Host "Previous version selected: $previousVersion"
         $oldFile = "./versions/$($previousVersion.Name)/ReflectionData.xml"
         $newFile = "./versions/$version/ReflectionData.xml"
         $changesFile = "./versions/$version/changes.md"
