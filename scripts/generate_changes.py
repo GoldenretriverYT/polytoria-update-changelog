@@ -95,7 +95,9 @@ def compare_versions(old_data, new_data):
         # Compare methods
         for method_name, parameters in new_methods.items():
             if method_name not in old_methods:
-                typeChanges.append(f'- New method added: `{method_name}`')
+                typeChanges.append(f'- New method added: `{method_name}` with parameters:')
+                for param in parameters:
+                    typeChanges.append(f'  - `{param[0]}` of type `{param[1]}`')
             elif old_methods[method_name] != parameters:
                 typeChanges.append(f'- Method `{method_name}` changed parameters: ')
 
