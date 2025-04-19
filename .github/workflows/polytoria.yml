@@ -21,7 +21,7 @@ jobs:
     - name: Fetch Polytoria updates
       id: fetch-updates
       run: |
-        $response = Invoke-WebRequest -Uri 'https://api.polytoria.com/v1/launcher/updates?os=windows&release=stable' -UseBasicParsing
+        $response = Invoke-WebRequest -Uri 'https://polytrack.top/api/ext/utils/polytoria/latestversions' -UseBasicParsing
         $json = $response.Content | ConvertFrom-Json
         echo "VERSION=$($json.Client.Version)" >> $env:GITHUB_ENV
         echo "DOWNLOAD_URL=$($json.Client.Download)" >> $env:GITHUB_ENV
