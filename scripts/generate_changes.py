@@ -1,6 +1,7 @@
 import sys
 from xml.etree import ElementTree as ET
 
+
 def parse_xml(file_path):
     tree = ET.parse(file_path)
     root = tree.getroot()
@@ -79,7 +80,6 @@ def compare_versions(old_data, new_data):
         
         if type_name not in old_data:
             typeChanges.append(f'Added new type: `{type_name}`')
-            continue
 
         old_methods = old_data[type_name]['methods']
         new_methods = new_data[type_name]['methods']
