@@ -78,13 +78,21 @@ def compare_versions(old_data, new_data):
         if inherits_from:
             typeChanges.append(f'Inherits from: [{inherits_from}](#{inherits_from})')
         
+        old_methods = {}
+        new_methods = {}
+        old_properties = {}
+        new_properties = {}
         if type_name not in old_data:
             typeChanges.append(f'Added new type: `{type_name}`')
-
-        old_methods = old_data[type_name]['methods']
-        new_methods = new_data[type_name]['methods']
-        old_properties = old_data[type_name]['properties']
-        new_properties = new_data[type_name]['properties']
+            old_methods = {}
+            new_methods = new_data[type_name]['methods']
+            old_properties = {}
+            new_properties = new_data[type_name]['properties']
+        else:
+            old_methods = old_data[type_name]['methods']
+            new_methods = new_data[type_name]['methods']
+            old_properties = old_data[type_name]['properties']
+            new_properties = new_data[type_name]['properties']
 
         # Compare methods
         for method_name, parameters in new_methods.items():
